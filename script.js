@@ -26,7 +26,10 @@ function createGrid(gH) {
     squares.forEach(square => {
         square.addEventListener('mouseover', function() {
             if (this.style.backgroundColor === "") {
-                this.style.backgroundColor = 'black';
+                const r = Math.floor(Math.random()*256);
+                const g = Math.floor(Math.random()*256);
+                const b = Math.floor(Math.random()*256);
+                this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             }
         });
     });
