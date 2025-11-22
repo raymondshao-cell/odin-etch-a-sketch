@@ -1,3 +1,5 @@
+const promptBtn = document.createElement('button');
+
 numSquares = 16;
 
 const container = document.querySelector('.container');
@@ -8,4 +10,11 @@ for (let i = 0; i < numSquares; i++) {
         container.appendChild(square);
     }
 
-console.log('hi');
+const squares = document.querySelectorAll('.square');
+squares.forEach(square => {
+    square.addEventListener('mouseover', function() {
+        if (this.style.backgroundColor === "") {
+            this.style.backgroundColor = 'black';
+        }
+    });
+});
