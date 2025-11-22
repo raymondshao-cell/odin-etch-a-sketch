@@ -1,5 +1,18 @@
 :root {
-  --gmargin: 5px; 
+  --gmargin: 5px;
+  --calcWidth: calc(25% - (2 * var(--gmargin)));
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.size-button {
+    max-width: 400px;
+    margin: auto;
+    font-size: 24px;
 }
 
 .container {
@@ -11,7 +24,7 @@
 .square {
     box-sizing: border-box;
     margin: var(--gmargin);
-    width: calc(25% - (2 * var(--gmargin)));
+    width: var(--calcWidth);
     aspect-ratio: 1 / 1;
     background-color: white;
     border: 1px solid #000;
