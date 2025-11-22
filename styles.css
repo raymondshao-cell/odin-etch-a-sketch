@@ -1,5 +1,5 @@
 :root {
-  --gmargin: 5px;
+  --gmargin: 0.1%;
   --calcWidth: calc(25% - (2 * var(--gmargin)));
 }
 
