@@ -23,13 +23,18 @@ function createGrid(gH) {
     }
 
     const squares = document.querySelectorAll('.square');
+    let opacityVal = 0;
     squares.forEach(square => {
         square.addEventListener('mouseover', function() {
             if (this.style.backgroundColor === "") {
-                const r = Math.floor(Math.random()*256);
-                const g = Math.floor(Math.random()*256);
-                const b = Math.floor(Math.random()*256);
-                this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                // const r = Math.floor(Math.random()*256);
+                // const g = Math.floor(Math.random()*256);
+                // const b = Math.floor(Math.random()*256);
+                // this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                this.style.backgroundColor = 'black';
+                opacityVal += 0.1;
+                this.style.opacity = opacityVal.toString();
+                console.log(`${this.style.opacity}`);
             }
         });
     });
